@@ -19,9 +19,8 @@ AUTOENCODER_LEARNING_RATE = 1e-3
 AUTOENCODER_EPOCHS = 20
 AUTOENCODER_BATCH_SIZE = 32
 
-# Rejilla latente (alto, ancho) a la que reduce el autoencoder para cada nº de
-# qubits. El nº de celdas (alto*ancho, con 1 canal) = nº de qubits, de modo que
-# el latente aplanado entra directamente al circuito.
+# Rejilla latente (alto, ancho) a la que reduce el autoencoder para cada numero de qubits
+# El numero de celdas (alto*ancho, con 1 canal) = numero de qubits
 TARGET_HW = {
     2: (1, 2),
     4: (2, 2),

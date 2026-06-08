@@ -55,7 +55,6 @@ def run():
     y_test_small = subsets["y_test_small"]
 
     # El autoencoder convolucional necesita la imagen con estructura espacial
-    # (28 x 28 x 1); tras codificar, el mapa latente se aplana para el circuito.
     X_img_train = subsets["train_images_small"].reshape(-1, 28, 28, 1)
     X_img_test = subsets["test_images_small"].reshape(-1, 28, 28, 1)
 
@@ -89,7 +88,6 @@ def run():
             )
 
             # El encoder ya devuelve el vector latente aplanado (N, n_qubits),
-            # gracias a la capa Flatten final, listo para el circuito.
             X_train_red = encoder.predict(np.asarray(X_img_train), verbose=0)
             X_test_red = encoder.predict(np.asarray(X_img_test), verbose=0)
 
